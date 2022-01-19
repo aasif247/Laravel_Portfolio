@@ -24,6 +24,12 @@
                         <input class="mt-3" type="file" id="bg_img" name="bg_img">
                     </div>
 
+                    <div class="form-group col-md-3 mt-3">
+                        <h4>Logo</h4>
+                        <img style="height:30vh" src="{{ url($main->logo) }}" class="img-thumbnail" >
+                        <input class="mt-3" type="file" id="logo" name="logo">
+                    </div>
+
                     <div class="form-group col-md-4 mt-3">
                         <div class="mb-3">
                             <label for="title"><h4>Title</h4></label>

@@ -42,6 +42,12 @@ class MainPagesController extends Controller
             $main->bg_img = 'storage/img/bg_img.' . $img_file->getClientOriginalExtension();
         }
 
+        if($request->file('logo')){
+            $img_file = $request->file('logo');
+            $img_file->storeAs('public/logo/','logo.' . $img_file->getClientOriginalExtension());
+            $main->logo = 'storage/logo/logo.' . $img_file->getClientOriginalExtension();
+        }
+
         if($request->file('resume')){
             $pdf_file = $request->file('resume');
             $pdf_file->storeAs('public/pdf/','resume.' . $pdf_file->getClientOriginalExtension());

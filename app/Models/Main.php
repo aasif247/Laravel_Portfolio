@@ -9,5 +9,5 @@ class Main extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','sub_title','bg_img','resume'];
+    protected $fillable = ['title','sub_title','bg_img','resume','logo'];
 }
