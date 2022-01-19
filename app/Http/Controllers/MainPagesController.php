@@ -32,7 +32,29 @@ class MainPagesController extends Controller
             'sub_title' => 'required|string',
         ]);
 
-        return 'xyz';
+        $main = Main::first();
+        $main->title = $request->title;
+        $main->sub_title = $request->sub_title;
+
+        if($request->file('bg_img')){
+            $img_file = $request->file('bg_img');
+            $img_file->storeAs('public/img/','bg_img.' . $img_file->getClientOriginalExtension());
+            $main->bg_img = 'storage/img/bg_img.' . $img_file->getClientOriginalExtension();
+        }
+
+        if($request->file('resume')){
+            $pdf_file = $request->file('resume');
+            $pdf_file->storeAs('public/pdf/','resume.' . $pdf_file->getClientOriginalExtension());
+            $main->resume = 'storage/pdf/resume.' . $pdf_file->getClientOriginalExtension();
+        }
+
+        if($main->save()){
+            return redirect()->route('admin.main')->with('success','Main page data has been updated successfully');
+        }else{
+            return redirect()->route('admin.main');
+        };
+
+        
     }
 
 }
