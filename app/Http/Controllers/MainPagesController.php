@@ -17,7 +17,7 @@ class MainPagesController extends Controller
         $main = Main::first();
         return view('pages.main',compact('main'));
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
@@ -27,6 +27,11 @@ class MainPagesController extends Controller
      */
     public function update(Request $request)
     {
+        $validateData = $request->validate([
+            'title' => 'required|string',
+            'sub_title' => 'required|string',
+        ]);
+
         return 'xyz';
     }
 

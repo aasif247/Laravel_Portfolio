@@ -11,6 +11,8 @@
                     <li class="breadcrumb-item active">Main</li>
                 </ol>
 
+                
+
                 <form action="{{ route('admin.main.update') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     {{ method_field('PUT') }}    
@@ -24,12 +26,15 @@
                     <div class="form-group col-md-4 mt-3">
                         <div class="mb-3">
                             <label for="title"><h4>Title</h4></label>
-                            <input type="text" class="form-control" id="title" name="title" value={{ $main->title }}>
+                            <input type="text"  id="title" name="title" value={{ $main->title }}
+                            class="form-control">
                         </div>
 
                         <div class="mb-4">
                             <label for="sub_title"><h4>Sub Title</h4></label>
-                            <input type="text" class="form-control" id="sub_title" name="sub_title" value={{ $main->sub_title }}>
+                            <input type="text" id="sub_title" name="sub_title" value={{ $main->sub_title }}
+                            class="form-control">
+    
                         </div>
                         <div>
                             <h4>Upload Resume</h4>
