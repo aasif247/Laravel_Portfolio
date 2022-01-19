@@ -38,3 +38,4 @@ Route::get('/admin/contact', [PagesController::class, 'contact'])->name('admin.c
 
 Route::get('/admin/main', [MainPagesController::class, 'index'])->name('admin.main');
 
+Route::put('/admin/main', [MainPagesController::class, 'update'])->name('admin.main.update');

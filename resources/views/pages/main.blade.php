@@ -11,6 +11,9 @@
                     <li class="breadcrumb-item active">Main</li>
                 </ol>
 
+                <form action="{{ route('admin.main.update') }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    {{ method_field('PUT') }}    
                 <div class="row">
                     <div class="form-group col-md-3 mt-3">
                         <h4>Background Image</h4>
@@ -34,6 +37,8 @@
                         </div>
                     </div>
                 </div>
+                <input type="submit" name="submit" class="btn btn-primary mt-5">
             </div>
+        </form>
         </main>
 @endsection              
