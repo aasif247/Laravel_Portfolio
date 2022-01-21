@@ -3,21 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Main;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function index(){
         $main = Main::first();
-        return view('pages.index',compact('main'));
+        // $service = Service::first();
+        return view('pages.index')->with('main',$main);
     }
 
     public function dashboard(){
         return view('pages.dashboard');
-    }
-
-    public function services(){
-        return view('pages.services');
     }
 
     public function portfolio(){

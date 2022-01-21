@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\MainPagesController;
+use App\Http\Controllers\ServicePagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +29,6 @@ Route::get('portfolio', [PagesController::class, 'index']);
 
 Route::get('/admin/dashboard', [PagesController::class, 'dashboard'])->name('admin.dashboard');
 
-Route::get('/admin/services', [PagesController::class, 'services'])->name('admin.services');
-
 Route::get('/admin/portfolio', [PagesController::class, 'portfolio'])->name('admin.portfolio');
 
 Route::get('/admin/about', [PagesController::class, 'about'])->name('admin.about');
@@ -37,5 +36,9 @@ Route::get('/admin/about', [PagesController::class, 'about'])->name('admin.about
 Route::get('/admin/contact', [PagesController::class, 'contact'])->name('admin.contact');
 
 Route::get('/admin/main', [MainPagesController::class, 'index'])->name('admin.main');
-
 Route::put('/admin/main', [MainPagesController::class, 'update'])->name('admin.main.update');
+
+Route::get('/admin/service/create', [ServicePagesController::class, 'create'])->name('admin.service.create');
+Route::post('/admin/service/store', [ServicePagesController::class, 'store'])->name('admin.service.store');
+
+Route::put('/admin/service', [ServicePagesController::class, 'update'])->name('admin.service.update');

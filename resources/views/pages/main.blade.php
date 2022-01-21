@@ -11,8 +11,6 @@
                     <li class="breadcrumb-item active">Main</li>
                 </ol>
 
-                
-
                 <form action="{{ route('admin.main.update') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     {{ method_field('PUT') }}    
