@@ -18,6 +18,7 @@
                         <th scope="col">Font Awesome Icon</th>
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -28,7 +29,14 @@
                                 <th scope="row">{{ $service->id }}</th>
                                 <td>{{ $service->icon }}</td>
                                 <td>{{ $service->name }}</td>
-                                <td>{{ $service->description }}</td>
+                                <td>{{Str::limit(strip_tags($service->description),40)  }}</td>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <a href="{{ route('admin.service.edit',$service->id)}}" class="btn btn-primary">Edit</a>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr> 
                             @endforeach    
                         @endif

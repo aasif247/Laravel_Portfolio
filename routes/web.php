@@ -42,6 +42,8 @@ Route::get('/admin/service/create', [ServicePagesController::class, 'create'])->
 Route::post('/admin/service/store', [ServicePagesController::class, 'store'])->name('admin.service.store');
 
 Route::get('/admin/service/list', [ServicePagesController::class, 'list'])->name('admin.service.list');
+Route::get('/admin/service/edit/{id}', [ServicePagesController::class, 'edit'])->name('admin.service.edit');
+Route::post('/admin/service/update/{id}', [ServicePagesController::class, 'update'])->name('admin.service.update');
 
 
-Route::put('/admin/service', [ServicePagesController::class, 'update'])->name('admin.service.update');
+// Route::put('/admin/service', [ServicePagesController::class, 'update'])->name('admin.service.update');
