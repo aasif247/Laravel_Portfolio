@@ -17,11 +17,6 @@
                 <div class="row">
 
                     <div class="form-group col-md-4 mt-3">
-                        <div class="mb-4">
-                            <label for="sub_title"><h4>Sub Title</h4></label>
-                            <input type="text" id="sub_title" name="sub_title" class="form-control">
-                        </div>
-
                         <div class="mb-3">
                             <label for="icon"><h4>Font Awesome Icon</h4></label>
                             <input type="text"  id="icon" name="icon" class="form-control">
