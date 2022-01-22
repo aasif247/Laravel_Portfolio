@@ -45,5 +45,4 @@ Route::get('/admin/service/list', [ServicePagesController::class, 'list'])->name
 Route::get('/admin/service/edit/{id}', [ServicePagesController::class, 'edit'])->name('admin.service.edit');
 Route::post('/admin/service/update/{id}', [ServicePagesController::class, 'update'])->name('admin.service.update');
 
-
-// Route::put('/admin/service', [ServicePagesController::class, 'update'])->name('admin.service.update');
+Route::delete('/admin/service/destroy/{id}', [ServicePagesController::class, 'destroy'])->name('admin.service.destroy');

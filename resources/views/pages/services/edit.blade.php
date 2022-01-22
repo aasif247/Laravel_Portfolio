@@ -14,8 +14,6 @@
                 <form action="{{ route('admin.service.update', $services->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     
-                    {{-- {{ method_field('PUT') }} --}}
-                    
                 <div class="row">
 
                     <div class="form-group col-md-4 mt-3">

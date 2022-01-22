@@ -35,6 +35,14 @@
                                         <div class="col-sm-2">
                                             <a href="{{ route('admin.service.edit',$service->id)}}" class="btn btn-primary">Edit</a>
                                         </div>
+
+                                        <div class="col-sm-2">
+                                            <form action="{{ route('admin.service.destroy', $service->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                                            </form>
+                                        </div>
                                     </div>
                                 </td>
                             </tr> 

@@ -62,4 +62,10 @@ class ServicePagesController extends Controller
         return redirect()->route('admin.service.list')->with('success','Service updated successfully');
     }
 
+    public function destroy($id){
+        $services = Service::find($id);
+        $services->delete();
+        return redirect()->route('admin.service.list')->with('success','Service deleted successfully');
+    }
+
 }
