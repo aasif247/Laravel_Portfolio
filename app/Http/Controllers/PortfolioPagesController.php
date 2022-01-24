@@ -115,7 +115,10 @@ class PortfolioPagesController extends Controller
 
     public function destroy($id){
         $portfolios = Portfolio::find($id);
+        @unlink(public_path($portfolio->big_image));
+        @unlink(public_path($portfolio->small_image));
         $portfolios->delete();
+        
         return redirect()->route('admin.portfolio.list')->with('success','Portfolio deleted successfully');
     }
     
