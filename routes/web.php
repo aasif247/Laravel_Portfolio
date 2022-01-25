@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\MainPagesController;
+use App\Http\Controllers\AboutPagesController;
 use App\Http\Controllers\ServicePagesController;
 use App\Http\Controllers\PortfolioPagesController;
 
@@ -50,4 +51,11 @@ Route::get('/portfolio/list', [PortfolioPagesController::class, 'list'])->name('
 Route::get('/portfolio/edit/{id}', [PortfolioPagesController::class, 'edit'])->name('admin.portfolio.edit');
 Route::post('/portfolio/update/{id}', [PortfolioPagesController::class, 'update'])->name('admin.portfolio.update');
 Route::delete('/portfolio/destroy/{id}', [PortfolioPagesController::class, 'destroy'])->name('admin.portfolio.destroy');
+
+Route::get('/about/create', [AboutPagesController::class, 'create'])->name('admin.about.create');
+Route::put('/about/store', [AboutPagesController::class, 'store'])->name('admin.about.store');
+Route::get('/about/list', [AboutPagesController::class, 'list'])->name('admin.about.list');
+Route::get('/about/edit/{id}', [AboutPagesController::class, 'edit'])->name('admin.about.edit');
+Route::post('/about/update/{id}', [AboutPagesController::class, 'update'])->name('admin.about.update');
+Route::delete('/about/destroy/{id}', [AboutPagesController::class, 'destroy'])->name('admin.about.destroy');
 });
