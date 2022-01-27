@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\MainPagesController;
 use App\Http\Controllers\AboutPagesController;
+use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\ServicePagesController;
 use App\Http\Controllers\PortfolioPagesController;
 
@@ -27,7 +28,7 @@ Auth::routes();
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('portfolio', [PagesController::class, 'index']);
+Route::get('portfolio', [PagesController::class, 'index'])->name('index');
 
 Route::group(['prefix' => 'admin'], function () {
 Route::get('/dashboard', [PagesController::class, 'dashboard'])->name('admin.dashboard');
@@ -59,3 +60,5 @@ Route::get('/about/edit/{id}', [AboutPagesController::class, 'edit'])->name('adm
 Route::post('/about/update/{id}', [AboutPagesController::class, 'update'])->name('admin.about.update');
 Route::delete('/about/destroy/{id}', [AboutPagesController::class, 'destroy'])->name('admin.about.destroy');
 });
+
+Route::post('/contact', [ContactFormController::class, 'store'])->name('contact.store');
