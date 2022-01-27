@@ -31,11 +31,12 @@ Auth::routes();
 Route::get('portfolio', [PagesController::class, 'index'])->name('index');
 
 Route::group(['prefix' => 'admin'], function () {
-Route::get('/dashboard', [PagesController::class, 'dashboard'])->name('admin.dashboard');
+
 Route::get('/portfolio', [PagesController::class, 'portfolio'])->name('admin.portfolio');
 Route::get('/about', [PagesController::class, 'about'])->name('admin.about');
 Route::get('/contact', [PagesController::class, 'contact'])->name('admin.contact');
 
+Route::get('/dashboard', [MainPagesController::class, 'dashboard'])->name('admin.dashboard');
 Route::get('/main', [MainPagesController::class, 'index'])->name('admin.main');
 Route::put('/main', [MainPagesController::class, 'update'])->name('admin.main.update');
 

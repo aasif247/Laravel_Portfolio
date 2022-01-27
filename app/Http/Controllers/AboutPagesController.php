@@ -8,6 +8,16 @@ use Illuminate\Support\Facades\Storage;
 
 class AboutPagesController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function create()
     {
         return view('pages.about.create');

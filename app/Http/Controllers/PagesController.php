@@ -10,6 +10,16 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
     public function index(){
         $main = Main::first();
         $services = Service::all();
@@ -18,10 +28,7 @@ class PagesController extends Controller
         return view('pages.index',compact('main','services','portfolios','abouts'));
     }
 
-    public function dashboard(){
-        return view('pages.dashboard');
-    }
-
+    
     public function portfolio(){
         return view('pages.portfolio');
     }
