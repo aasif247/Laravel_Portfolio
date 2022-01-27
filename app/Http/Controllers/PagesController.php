@@ -27,17 +27,4 @@ class PagesController extends Controller
         $abouts = About::all();
         return view('pages.index',compact('main','services','portfolios','abouts'));
     }
-
-    
-    public function portfolio(){
-        return view('pages.portfolio');
-    }
-
-    public function about(){
-        return view('pages.about');
-    }
-
-    public function contact(){
-        return view('pages.contact');
-    }
 }
