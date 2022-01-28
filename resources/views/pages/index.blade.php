@@ -26,7 +26,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="{{(@main->logo)?url($main->logo):asset("assets/img/logo.png") }}" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="{{(@$main->logo)?url($main->logo):asset("assets/img/logo.png") }}" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -42,11 +42,11 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead" style="background-image: url(<?php echo (@main->bg_img)?url($main->bg_img):asset("assets/img/bg_img.jpg") ?>)">
+        <header class="masthead" style="background-image: url(<?php echo (@$main->bg_img)?url($main->bg_img):asset("assets/img/bg_img.jpg") ?>)">
             <div class="container">
-                <div class="masthead-subheading">{{(@main->sub_title)?$main->sub_title:"The Sub Title" }}</div>
-                <div class="masthead-heading text-uppercase">{{ (@main->title)?$main->title:"The Title" }}</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="{{(@main->resume)?url($main->resume):"#"}}">Download Resume</a>
+                <div class="masthead-subheading">{{(@$main->sub_title)?$main->sub_title:"The Sub Title" }}</div>
+                <div class="masthead-heading text-uppercase">{{ (@$main->title)?$main->title:"The Title" }}</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="{{(@$main->resume)?url($main->resume):"#"}}">Download Resume</a>
             </div>
         </header>
         <!-- Services-->
