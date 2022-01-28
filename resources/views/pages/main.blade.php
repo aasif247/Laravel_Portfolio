@@ -31,13 +31,13 @@
                     <div class="form-group col-md-4 mt-3">
                         <div class="mb-3">
                             <label for="title"><h4>Title</h4></label>
-                            <input type="text"  id="title" name="title" value="{{(@$main->title)?$main->title:"The Title"}}"
+                            <input type="text"  id="title" name="title" value="{{(@$main->title)?$main->title:"Asif Talukdar"}}"
                             class="form-control">
                         </div>
 
                         <div class="mb-4">
                             <label for="sub_title"><h4>Sub Title</h4></label>
-                            <input type="text" id="sub_title" name="sub_title" value="{{ (@$main->sub_title)?$main->sub_title:"The Sub Title" }}"
+                            <input type="text" id="sub_title" name="sub_title" value="{{ (@$main->sub_title)?$main->sub_title:"Welcome To My Portfolio" }}"
                             class="form-control">
     
                         </div>
