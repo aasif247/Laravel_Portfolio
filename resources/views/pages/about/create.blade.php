@@ -40,7 +40,7 @@
 
                     <div class="form-group col-md-3 mt-3">
                         <h4>Image</h4>
-                        <img style="height:30vh" src="{{ asset('assets/img/about.png') }}" class="img-thumbnail" >
+                        <img style="height:30vh" src="{{ secure_asset('assets/img/about.png') }}" class="img-thumbnail" >
                         <input class="mt-3" type="file" id="image" name="image">
                     </div>
 

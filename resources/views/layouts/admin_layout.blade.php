@@ -8,7 +8,7 @@
         <meta name="author" content="" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Dashboard</title>
-        <link href="{{ asset('backend/css/styles.css') }}" rel="stylesheet" />
+        <link href="{{ secure_asset('backend/css/styles.css') }}" rel="stylesheet" />
         {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" 
         crossorigin="anonymous"></script> --}}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -149,7 +149,7 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="{{ asset('backend/js/scripts.js') }}"></script>
+        <script src="{{ secure_asset('backend/js/scripts.js') }}"></script>
     </body>
 </html>
    
